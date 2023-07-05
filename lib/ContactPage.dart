@@ -130,7 +130,7 @@ class ContactPage extends StatelessWidget {
                 child: CircleAvatar(backgroundImage: AssetImage("assets/images/barney stinson.jpg"),),
               ),
               title: Text("Barney Stinson"),
-              subtitle: Text("49 minutes ago"),
+              subtitle: Text("SUITTTS"),
             ),
             ListTile(
               leading: Padding(

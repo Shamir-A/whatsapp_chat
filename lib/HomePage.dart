@@ -1,20 +1,19 @@
-import 'package:device_preview/device_preview.dart';
+
 import 'package:flutter/material.dart';
 import 'package:whatsapp_chat/ChatsWidget.dart';
 
 void main() {
-  runApp(DevicePreview(
-      builder: (BuildContext context) => MaterialApp(
-            theme: ThemeData(
-                scaffoldBackgroundColor: Colors.white,
-                appBarTheme: const AppBarTheme(color: Color(0xFF075E54))),
-            useInheritedMediaQuery: true,
-            home:  HomePage(),
-            debugShowCheckedModeBanner: false,
-            // routes: {
-            //       "/" : (context) => Chats(),
-            // },
-          )));
+  runApp(MaterialApp(
+        theme: ThemeData(
+            scaffoldBackgroundColor: Colors.white,
+            appBarTheme: const AppBarTheme(color: Color(0xFF075E54))),
+        useInheritedMediaQuery: true,
+        home:  HomePage(),
+        debugShowCheckedModeBanner: false,
+        // routes: {
+        //       "/" : (context) => Chats(),
+        // },
+      ));
 }
 
 class HomePage extends StatelessWidget {
@@ -124,19 +123,19 @@ class HomePage extends StatelessWidget {
                 labelStyle:
                     const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 tabs: [
-                  Container(
+                  const SizedBox(
                     width: 25,
-                    child: const Tab(
+                    child:  Tab(
                       icon: Icon(Icons.groups),
                     ),
                   ),
-                  Container(
+                  SizedBox(
                     width: 80,
                     child: Tab(
                         child: Row(
                       children: [
-                        Text("Chats"),
-                        SizedBox(width: 8),
+                        const Text("Chats"),
+                        const SizedBox(width: 8),
                         Container(
                           alignment: Alignment.center,
                           height: 22,
@@ -154,15 +153,15 @@ class HomePage extends StatelessWidget {
                       ],
                     )),
                   ),
-                  Container(
+                  const SizedBox(
                     width: 80,
-                    child: const Tab(
+                    child: Tab(
                       child: Text("Status"),
                     ),
                   ),
-                  Container(
+                  const SizedBox(
                     width: 80,
-                    child: const Tab(
+                    child: Tab(
                       child: Text("Calls"),
                     ),
                   ),

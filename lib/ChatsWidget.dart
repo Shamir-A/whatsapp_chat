@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:whatsapp_chat/ContactPage.dart';
 
 class ChatWidget extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     var name = [
@@ -52,34 +50,34 @@ class ChatWidget extends StatelessWidget {
     ];
     return Scaffold(
       body: ListView(
-        children: List.generate(
-            9,
-            (index) => Card(
-                  child: ListTile(
-                    title: Padding(
-                      padding: const EdgeInsets.only(left: 10, bottom: 5),
-                      child: Text(
-                          style: const  TextStyle(
-                              fontSize: 15, fontWeight: FontWeight.bold),
-                          name[index]),
-                    ),
-                    subtitle: Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Text("${subtext[index]}"),
-                    ),
-                    //leading: Image.asset(image[index]),
-                   leading: CircleAvatar(backgroundImage: AssetImage(image[index])),
-                    trailing: Padding(
-                      padding: const EdgeInsets.only(bottom: 30),
-                      child: Text("${endStuff[index]}"),
-                    ),
-                  ),
-                )),
-      ),
-      floatingActionButton: FloatingActionButton(onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => ContactPage()));
-      },
-      child: Icon(Icons.chat),
+          children: List.generate(
+        9,
+        (index) => ListTile(
+          title: Padding(
+            padding: const EdgeInsets.only(left: 10, bottom: 5),
+            child: Text(
+                style:
+                    const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                name[index]),
+          ),
+          subtitle: Padding(
+            padding: const EdgeInsets.only(left: 10),
+            child: Text("${subtext[index]}"),
+          ),
+          //leading: Image.asset(image[index]),
+          leading: CircleAvatar(backgroundImage: AssetImage(image[index])),
+          trailing: Padding(
+            padding: const EdgeInsets.only(bottom: 30),
+            child: Text("${endStuff[index]}"),
+          ),
+        ),
+      )),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (contefxt) => ContactPage()));
+        },
+        child: Icon(Icons.chat),
         backgroundColor: Color(0xFF25D366),
       ),
     );
